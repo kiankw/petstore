@@ -2,7 +2,6 @@ package dal
 
 import (
 	"context"
-	"log"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -14,7 +13,7 @@ func init() {
 	dsn := "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatalln("MySQL not found")
+		// log.Fatalln("MySQL not found")
 	}
 	DB = db
 }
